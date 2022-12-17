@@ -4,7 +4,7 @@
 # print(a.getNumPages())
 # print(a.getPage(2).extract_text())
 # str = ""
-# for i in range(1,30):
+# for i in range("From","To"):
 #     str += a.getPage(i).extract_text()
 # with open("text.txt", "w", encoding="utf-8") as f:
 #     f.write(str)
@@ -19,8 +19,8 @@ pdf_reader = PyPDF2.PdfFileReader(pdf)
 #checking number of pages in a pdf file
 print(pdf_reader.numPages)
 #creating a page object
-page = pdf_reader.getPage(5)
+page = pdf_reader.getPage()
 #finally extracting text from the page
-print(page.extractText(2))
+print(page.extractText())
 #closing the pdf file
 pdf.close()
